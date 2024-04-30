@@ -63,8 +63,8 @@ const Page = () => {
                             <TableHead className=" text-xs text-left">Puesto</TableHead>
                             <TableHead className='text-xs'>Jugador</TableHead>
                             <TableHead className='text-xs'>Puntos</TableHead>
-                            <TableHead className='text-xs sm:flex hidden'>Pts. Ganados</TableHead>
-                            <TableHead className='text-xs sm:flex hidden'>Pts. Perdidos</TableHead>
+                            <TableHead className='text-xs '>Pts. Ganados</TableHead>
+                            <TableHead className='text-xs '>Pts. Perdidos</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -73,8 +73,8 @@ const Page = () => {
                                 <TableCell className="font-medium text-xs">{ranking.position}°</TableCell>
                                 <TableCell className='font-semibold text-xs'>{ranking.player_name}</TableCell>
                                 <TableCell className='text- text-xs text-slate-700 font-semibold'>{ranking.total_points}</TableCell>
-                                <TableCell className='text-green-500 text-xs sm:flex hidden'>{ranking.points_gained}</TableCell>
-                                <TableCell className='text-red-500 text-xs sm:flex hidden'>{ranking.points_lost}</TableCell>
+                                <TableCell className='text-green-500 text-xs '>{ranking.points_gained}</TableCell>
+                                <TableCell className='text-red-500 text-xs '>{ranking.points_lost}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
