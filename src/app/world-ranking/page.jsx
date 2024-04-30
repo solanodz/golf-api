@@ -60,21 +60,21 @@ const Page = () => {
                     <TableCaption>A list of your recent invoices.</TableCaption>
                     <TableHeader>
                         <TableRow>
-                            <TableHead className="w-[100px]">Puesto</TableHead>
-                            <TableHead>Jugador</TableHead>
-                            <TableHead>Puntos</TableHead>
-                            <TableHead>Pts. Ganados</TableHead>
-                            <TableHead className=''>Pts. Perdidos</TableHead>
+                            <TableHead className=" text-xs text-left">Puesto</TableHead>
+                            <TableHead className='text-xs'>Jugador</TableHead>
+                            <TableHead className='text-xs'>Puntos</TableHead>
+                            <TableHead className='text-xs sm:flex hidden'>Pts. Ganados</TableHead>
+                            <TableHead className='text-xs sm:flex hidden'>Pts. Perdidos</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         {data?.results?.rankings.map((ranking, index) => (
                             <TableRow key={index} className='text-left'>
-                                <TableCell className="font-medium">{ranking.position}</TableCell>
-                                <TableCell className='font-semibold'>{ranking.player_name}</TableCell>
-                                <TableCell className='text-'>{ranking.total_points}</TableCell>
-                                <TableCell className='text-green-500'>{ranking.points_gained}</TableCell>
-                                <TableCell className='text-red-500'>{ranking.points_lost}</TableCell>
+                                <TableCell className="font-medium text-xs">{ranking.position}°</TableCell>
+                                <TableCell className='font-semibold text-xs'>{ranking.player_name}</TableCell>
+                                <TableCell className='text- text-xs text-slate-700 font-semibold'>{ranking.total_points}</TableCell>
+                                <TableCell className='text-green-500 text-xs sm:flex hidden'>{ranking.points_gained}</TableCell>
+                                <TableCell className='text-red-500 text-xs sm:flex hidden'>{ranking.points_lost}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

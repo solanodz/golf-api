@@ -1,15 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
+import { buttonVariants } from './ui/button'
 
 const Navbar = () => {
     return (
-        <div className='bg-zinc-100 border-b w-full font-semibold text-right border-zinc-300 p-4 '>
-            <div className='flex flex-row gap-4 ml-auto w-full justify-end'>
-                <Link href='/'>Home</Link>
-                <Link href='/schedules'>Torneos</Link>
-                <Link href='/world-ranking'>World Ranking</Link>
-                <Link href='/leaderboard'>Leaderboard</Link>
-            </div>
+        <div>
+            <nav className='flex text-right gap-2 justify-end mb-12 p-2 bg-slate-300'>
+                <Link href='/login' className={buttonVariants({ variant: 'default' })}>Inicia sesión</Link>
+                <Link href='/login' className={buttonVariants({ variant: 'default' })}>Registrate</Link>
+            </nav>
         </div>
     )
 }

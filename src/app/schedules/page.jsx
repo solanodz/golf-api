@@ -42,18 +42,16 @@ const Page = () => {
         <div className='max-w-7xl mx-auto'>
             {
                 data && (
-                    <div>
 
-                        <div>
-                            <h2 className='font-bold text-3xl tracking-tight my-12 text-center'>Events</h2>
-                            <div className='grid grid-cols-3 gap-2'>
-                                {data.schedule.map((event) => (
-                                    <div key={event.id} className=' max-w-md bg-zinc-100 border border-zinc-300 p-2 rounded-md'>
-                                        <p className='font-semibold'>{event.name}</p>
-                                        <span className='text-green-600'>1° lugar: $ {event.winnersShare?.$numberInt}</span>
-                                    </div>
-                                ))}
-                            </div>
+                    <div>
+                        <h2 className='font-bold text-3xl tracking-tight my-12 text-center'>Events</h2>
+                        <div className='grid grid-cols-1 sm:grid-cols-3 gap-2 m-2'>
+                            {data.schedule.map((event) => (
+                                <div key={event.id} className=' max-w-md bg-zinc-100 border border-zinc-300 p-2 rounded-md'>
+                                    <p className='font-semibold'>{event.name}</p>
+                                    <span className='text-green-600'>1° lugar: $ {event.winnersShare?.$numberInt}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 )
