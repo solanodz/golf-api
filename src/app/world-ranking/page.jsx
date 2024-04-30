@@ -22,12 +22,12 @@ const Page = () => {
     //     'X-RapidAPI-Host': 'golf-leaderboard-data.p.rapidapi.com'
     // }
 
-    const url = 'https://golf-leaderboard-data.p.rapidapi.com/world-rankings';
+    const url = process.env.NEXT_PUBLIC_WORLD_RANKING_URL;
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '471c6c95fdmsh5030523155cb834p186b27jsn8e86428abcbc',
-            'X-RapidAPI-Host': 'golf-leaderboard-data.p.rapidapi.com'
+            'X-RapidAPI-Key': process.env.NEXT_PUBLIC_WORLD_RANKING_API_KEY,
+            'X-RapidAPI-Host': process.env.NEXT_PUBLIC_WORLD_RANKING_API_HOST
         }
     };
 

@@ -13,12 +13,12 @@ const Page = () => {
     //     'X-RapidAPI-Host': 'golf-leaderboard-data.p.rapidapi.com'
     // }
 
-    const url = 'https://live-golf-data.p.rapidapi.com/schedule?orgId=1&year=2024';
+    const url = process.env.NEXT_PUBLIC_SCHEDULES_URL;
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '0f7de4c0d4mshd8a6a62ef1b964bp1a69fcjsnc125c166ff7b',
-            'X-RapidAPI-Host': 'live-golf-data.p.rapidapi.com'
+            'X-RapidAPI-Key': process.env.NEXT_PUBLIC_SCHEDULES_API_KEY,
+            'X-RapidAPI-Host': process.env.NEXT_PUBLIC_SCHEDULES_API_HOST
         }
     };
 
