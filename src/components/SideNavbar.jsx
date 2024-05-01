@@ -8,7 +8,7 @@ import { MdLeaderboard } from "react-icons/md";
 
 const Navbar = () => {
     return (
-        <div className='bg-zinc-100 border-b sm:w-fit sm:justify-between font-semibold sm:min-h-screen border-zinc-300 p-4 '>
+        <div className='bg-slate-200 m-2 rounded-lg border border-slate-400 text-slate-600 sm:w-fit sm:justify-between font-semibold sm:min-h-screen  p-4 '>
             <div className='flex sm:flex-col flex-row gap-4 ml-auto justify-center my-0 sm:my-6 w-full'>
                 <Link href='/' className='flex items-center gap-2'>
                     <FaHome className='h-6 w-6' />

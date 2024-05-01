@@ -26,7 +26,7 @@ const Page = () => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': process.env.NEXT_PUBLIC_WORLD_RANKING_API_KEY,
+            'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY,
             'X-RapidAPI-Host': process.env.NEXT_PUBLIC_WORLD_RANKING_API_HOST
         }
     };
@@ -49,9 +49,9 @@ const Page = () => {
 
 
     return (
-        <div className='mx-auto max-w-7xl my-12'>
+        <div className='mx-auto max-w-7xl my-12 text-slate-600'>
             <div className='text-center'>
-                <h1 className='font-bold text-3xl tracking-tight '>{data?.meta?.title}</h1>
+                <h1 className='font-bold text-3xl tracking-tight  '>{data?.meta?.title}</h1>
                 <p>{data?.meta?.description}</p>
             </div>
             <div className='max-w-3xl mx-auto my-8'>

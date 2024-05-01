@@ -26,7 +26,7 @@ const Page = () => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': process.env.NEXT_PUBLIC_FEDEX_RANKING_API_KEY,
+            'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY,
             'X-RapidAPI-Host': process.env.NEXT_PUBLIC_FEDEX_RANKING_API_HOST
         }
     };
@@ -51,8 +51,8 @@ const Page = () => {
     return (
         <div className='mx-auto max-w-7xl my-12'>
             <div className='text-center'>
-                <h1 className='font-bold text-3xl tracking-tight '>{data?.meta?.title}</h1>
-                <p>{data?.meta?.description}</p>
+                <h1 className='font-bold text-3xl tracking-tight '>{data?.name}</h1>
+                <p>{data?.description}</p>
             </div>
             <div className='max-w-3xl mx-auto my-8'>
                 <p>Ranking FedEx del año {data?.year}</p>
